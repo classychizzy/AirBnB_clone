@@ -2,6 +2,7 @@
 """comment"""
 import cmd
 from models.base_model import BaseModel
+from models.user import User
 import json
 
 class HBNBCommand(cmd.Cmd):
@@ -12,7 +13,7 @@ class HBNBCommand(cmd.Cmd):
     """
 
     prompt = "(hbnb) "
-    classDict = {'BaseModel': BaseModel}
+    classDict = {'BaseModel': BaseModel, 'User': User}
 
     def do_quit(self, arg):
         """Quit command to exit the programm"""
