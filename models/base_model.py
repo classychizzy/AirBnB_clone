@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-""" BaseModel module 
+""" BaseModel module
 uuid: generates a unique id for instances of the class
 datetime: sets and updates the date an instance is created
 """
 
-
-"""standard library imports"""
 import uuid
 from datetime import datetime
 
@@ -24,7 +22,7 @@ class BaseModel():
         that is updated when a new object is created
         *args: not used if kwargs is empty
         **kwargs: key/ value pairs of the attributes
-        tform: time format
+        date_string: time format
         """
         date_string = "%Y-%m-%dT%H:%M:%S.%f"
         self.id = str(uuid.uuid4())
@@ -33,7 +31,6 @@ class BaseModel():
 
         if (len(kwargs) != 0):
             for key, value in kwargs.items():
-                
                 if key == "created_at" or key == "updated_at":
                     """
                     created_at and updated_at is changed to
@@ -44,7 +41,6 @@ class BaseModel():
                 else:
                     """returns the datetime as string"""
                     self.__dict__[key] = value
-
 
     def save(self):
         """
@@ -75,4 +71,5 @@ class BaseModel():
         """a method that returns a string of the class name
         id and contents of the dictionary
         """
-        return "[{}], ({}), {}".format(self.__class__.__name__, self.id, self.__dict__)
+        return "[{}], ({}), {}".format(self.__class__.__name__,
+                                       self.id, self.__dict__)

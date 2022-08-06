@@ -41,8 +41,8 @@ class FileStorage(BaseModel):
             with open(self.__file_path, 'r') as f:
                 odict = json.loads(f.read())
             for value in odict.values():
-                    cls = values["__class__"]
-                    self.new(eval(cls_name)(**value))
+                cls = values["__class__"]
+                self.new(eval(cls_name)(**value))
 
         except FileNotFoundError:
             pass

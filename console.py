@@ -5,6 +5,7 @@ from models.base_model import BaseModel
 from models.user import User
 import json
 
+
 class HBNBCommand(cmd.Cmd):
     """Defines the AirBnB command interpreter.
 
@@ -31,7 +32,7 @@ class HBNBCommand(cmd.Cmd):
         """Creates a new instance of a given class, saves it and prints the id.
         Usage: create <className>
         """
-        
+
         if not model:
             print("** class name missing **")
         elif model not in HBNBCommand.classDict.keys():
@@ -39,25 +40,26 @@ class HBNBCommand(cmd.Cmd):
         else:
             my_model = HBNBCommand.classDict[model]()
             print(my_model.id)
-            #my_model.save()
+            # my_model.save()
 
     def do_show(self, arg):
-        """Prints the string representation of an instance based on the class name and id.
+        """Prints the string representation of an instane.
         Usage: show <className> <instanceID>
         """
-        
+
         if not arg:
             print("** class name missing **")
             return
 
         args = arg.split(' ')
-        
+
         if args[0] not in HBNBCommand.classDict.keys():
             print("** class doesn't exist **")
         elif len(args) == 1:
             print("** instance id missing **")
         else:
             print("test")
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
