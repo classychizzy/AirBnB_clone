@@ -35,9 +35,10 @@ class BaseModel():
                     """
                     value = datetime.strptime(kwargs[key], date_string)
 
-                else:
-                    """returns the datetime as string"""
-                    self.__dict__[key] = value
+                elif key == "__class__":
+                    continue
+
+                setattr(self, key, value)
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
