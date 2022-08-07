@@ -11,6 +11,7 @@ from time import sleep
 from datetime import datetime
 from models.base_model import BaseModel
 
+
 class TestBaseModel(unittest.TestCase):
     """
     Tests attributes of the base model
@@ -37,7 +38,7 @@ class TestBaseModel(unittest.TestCase):
         Tests for correct datetime format
         """
         pass
-    
+
     def test_datetime(self):
         """
         Tests for correct datetime format
@@ -47,4 +48,3 @@ class TestBaseModel(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
