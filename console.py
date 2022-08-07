@@ -134,8 +134,8 @@ class HBNBCommand(cmd.Cmd):
         try:
             arg = args.split(' ')
             for key, objc in all_objs.items():
-                if arg[0] == objc.__class__.__name__
-                and arg[1].strip('"') == objc.id:
+                cls_name = objc.__class__.__name__
+                if arg[0] == cls_name and arg[1].strip('"') == objc.id:
                     inst_p = True
             model_name, model_id, attr, value = args.split(' ')
         except Exception as e:
