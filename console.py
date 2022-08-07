@@ -21,8 +21,8 @@ class HBNBCommand(cmd.Cmd):
 
     prompt = "(hbnb) "
     classDict = {'BaseModel': BaseModel, 'User': User, 'Place': Place,
-                   'City': City, 'Amenity': Amenity, 'State': State,
-                   'Review': Review}
+                 'City': City, 'Amenity': Amenity, 'State': State,
+                 'Review': Review}
 
     def do_quit(self, arg):
         """Quit command to exit the programm"""
@@ -134,7 +134,8 @@ class HBNBCommand(cmd.Cmd):
         try:
             arg = args.split(' ')
             for key, objc in all_objs.items():
-                if arg[0] == objc.__class__.__name__ and arg[1].strip('"') == objc.id:
+                if arg[0] == objc.__class__.__name__
+                and arg[1].strip('"') == objc.id:
                     inst_p = True
             model_name, model_id, attr, value = args.split(' ')
         except Exception as e:
@@ -144,7 +145,7 @@ class HBNBCommand(cmd.Cmd):
             if args.count(' ') == 0:
                 print("** instance id missing **")
                 return
-            if inst_p == False:
+            if inst_p is False:
                 print("** no instance found **")
                 return
             if args.count(' ') == 1:
@@ -164,8 +165,6 @@ class HBNBCommand(cmd.Cmd):
                     setattr(objc, attr, value)
                     storage.save()
                     return
-
-
 
 
 if __name__ == '__main__':
