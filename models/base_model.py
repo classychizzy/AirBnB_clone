@@ -76,5 +76,5 @@ class BaseModel():
         """a method that returns a string of the class name
         id and contents of the dictionary
         """
-        return "[{}], ({}), {}".format(self.__class__.__name__,
-                                       self.id, self.__dict__)
+        clname = self.__class__.__name__
+        return "[{}] ({}) {}".format(clname, self.id, self.__dict__)
