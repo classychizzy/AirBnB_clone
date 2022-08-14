@@ -1,0 +1,17 @@
+/* styles for the header
+*/
+header{
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid #cccccc;
+}
+
+.logo{
+    /* Background pattern from Toptal Subtle Patterns */
+    /* background-image: url("/images/hbnb_icon.png"); */
+     background-image: url("https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/268/logo.png"); 
+     background-repeat: no-repeat;
+     width: 100%;
+     height:70px ; 
+}
