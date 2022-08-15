@@ -1,15 +1,18 @@
 /** styles for the body
-*/ 
-body{
+*/
+body {
     margin: 0px;
     padding: 0px;
     color: #484848;
     font-size: 14px;
-    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.container{
+
+.container {
     max-width: 1000px;
-margin-top: 30px;
-margin-bottom: 30px;
-justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right:auto;
+    margin-left:auto;
+    align-self: center;
 }
